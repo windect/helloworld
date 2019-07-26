@@ -6,10 +6,10 @@ CONTRACT helloworld: public contract{
     public:
     using contract::contract;
 
-    ACTION helloworld(name user){
-        rwquir_auth(user);
+    ACTION hi(name user){
+        require_auth(user);
         print("hello world", user);
     }
 
     
-}
+};
